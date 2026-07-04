@@ -1,6 +1,6 @@
 # hexed
 
-A terminal byte editor built with [Bubble Tea](https://github.com/charmbracelet/bubbletea).
+A terminal byte editor built with Go and [Bubble Tea](https://github.com/charmbracelet/bubbletea).
 Open a file, inspect its bytes in four different views, edit them in place, and
 write the result back to disk.
 

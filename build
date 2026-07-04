@@ -1,0 +1,9 @@
+#!/bin/bash
+for os in linux darwin windows; do
+  for arch in amd64 arm64; do
+    ext=""
+    [ "$os" = "windows" ] && ext=".exe"
+    GOOS=$os GOARCH=$arch CGO_ENABLED=0 go build -ldflags="-s -w" \
+      -o "dist/hexed_${os}_${arch}${ext}" .
+  done
+done
